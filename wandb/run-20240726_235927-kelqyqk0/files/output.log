@@ -1,0 +1,460 @@
+252
+Training Samples: 202
+Testing Samples: 50
+252
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B7_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B7_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:23<00:00,  8.65it/s]
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌        | 47/50 [00:01<00:00, 30.67it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.68it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:23<00:00,  8.74it/s]
+ 58%|█████████████████████████████████████████████████████████████████████████████████▏                                                          | 29/50 [00:00<00:00, 31.60it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.65it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.92it/s]
+ 48%|███████████████████████████████████████████████████████████████████▏                                                                        | 24/50 [00:00<00:00, 29.65it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.29it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:21<00:00,  9.33it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 31.01it/s]
+  0%|                                                                                                                                                    | 0/202 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 99%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉  | 199/202 [00:21<00:00,  8.58it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:21<00:00,  9.21it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.69it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  9.10it/s]
+  0%|                                                                                                                                                     | 0/50 [00:00<?, ?it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 31.07it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  9.03it/s]
+  8%|███████████▎                                                                                                                                 | 4/50 [00:00<00:01, 30.09it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.39it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:21<00:00,  9.21it/s]
+ 42%|██████████████████████████████████████████████████████████▊                                                                                 | 21/50 [00:00<00:00, 29.76it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 29.93it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  9.13it/s]
+ 40%|████████████████████████████████████████████████████████                                                                                    | 20/50 [00:00<00:00, 30.73it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.18it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  9.12it/s]
+ 56%|██████████████████████████████████████████████████████████████████████████████▍                                                             | 28/50 [00:00<00:00, 31.22it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.90it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.95it/s]
+ 54%|███████████████████████████████████████████████████████████████████████████▌                                                                | 27/50 [00:00<00:00, 31.74it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.93it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.98it/s]
+ 54%|███████████████████████████████████████████████████████████████████████████▌                                                                | 27/50 [00:00<00:00, 30.36it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.38it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  9.03it/s]
+ 38%|█████████████████████████████████████████████████████▏                                                                                      | 19/50 [00:00<00:00, 31.25it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 31.02it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.91it/s]
+ 24%|█████████████████████████████████▌                                                                                                          | 12/50 [00:00<00:01, 31.50it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 29.00it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.89it/s]
+  6%|████████▍                                                                                                                                    | 3/50 [00:00<00:01, 29.36it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.82it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.76it/s]
+  0%|▋                                                                                                                                           | 1/202 [00:00<00:21,  9.15it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.88it/s]
+ 64%|█████████████████████████████████████████████████████████████████████████████████████████▌                                                  | 32/50 [00:01<00:00, 30.66it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.99it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.87it/s]
+ 46%|████████████████████████████████████████████████████████████████▍                                                                           | 23/50 [00:00<00:00, 30.89it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.57it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.92it/s]
+ 40%|████████████████████████████████████████████████████████                                                                                    | 20/50 [00:00<00:00, 30.21it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.76it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.86it/s]
+ 22%|██████████████████████████████▊                                                                                                             | 11/50 [00:00<00:01, 31.31it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 29.74it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 99%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋ | 200/202 [00:22<00:00,  8.75it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.96it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.82it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.87it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.87it/s]
+  0%|                                                                                                                                                    | 0/202 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [01:17<00:00,  2.61it/s]
+ 52%|████████████████████████████████████████████████████████████████████████▊                                                                   | 26/50 [00:00<00:00, 30.73it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.36it/s]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.80it/s]
+ 24%|█████████████████████████████████▌                                                                                                          | 12/50 [00:00<00:01, 30.42it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.14it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.85it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.21it/s]
+  0%|                                                                                                                                                    | 0/202 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.94it/s]
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍     | 48/50 [00:01<00:00, 30.97it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.94it/s]
+  6%|████████▎                                                                                                                                  | 12/202 [00:01<00:21,  8.75it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 15, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 84, in trainer
+    train_gen_mask = model(train_img)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 70, in forward
+    x4 = self.down3(x3)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/ops/misc.py", line 259, in forward
+    scale = self._scale(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/ops/misc.py", line 255, in _scale
+    scale = self.fc2(scale)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 15, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 84, in trainer
+    train_gen_mask = model(train_img)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 70, in forward
+    x4 = self.down3(x3)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/ops/misc.py", line 259, in forward
+    scale = self._scale(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/ops/misc.py", line 255, in _scale
+    scale = self.fc2(scale)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

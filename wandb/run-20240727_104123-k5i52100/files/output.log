@@ -1,0 +1,139 @@
+Data Set Setting Up
+252 252
+Training Samples: 202
+Testing Samples: 50
+252
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B7_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B7_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+
+
+
+
+
+
+
+
+
+
+ 97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊    | 195/202 [00:22<00:00,  9.09it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:22<00:00,  8.81it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.77it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:24<00:00,  8.12it/s]
+ 54%|██████████████████████████████████████████████████████████████████▍                                                        | 27/50 [00:00<00:00, 30.09it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.61it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:23<00:00,  8.48it/s]
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████     | 48/50 [00:01<00:00, 31.58it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.80it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:24<00:00,  8.22it/s]
+ 88%|████████████████████████████████████████████████████████████████████████████████████████████████████████████▏              | 44/50 [00:01<00:00, 30.34it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.06it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:24<00:00,  8.14it/s]
+ 40%|█████████████████████████████████████████████████▏                                                                         | 20/50 [00:00<00:01, 29.87it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 30.22it/s]
+
+
+
+
+
+
+
+
+
+ 83%|████████████████████████████████████████████████████████████████████████████████████████████████████▋                    | 168/202 [00:20<00:04,  8.39it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 12, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 50, in trainer
+    train_gen_mask = model(train_img)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 80, in forward
+    x4 = self.down3(x3)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

@@ -1,0 +1,183 @@
+2024-07-27 00:27:55,271 INFO    StreamThr :1467183 [internal.py:wandb_internal():85] W&B internal server running at pid: 1467183, started at: 2024-07-27 00:27:55.271142
+2024-07-27 00:27:55,273 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: status
+2024-07-27 00:27:55,275 INFO    WriterThread:1467183 [datastore.py:open_for_write():87] open: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/run-h3nugpnv.wandb
+2024-07-27 00:27:55,276 DEBUG   SenderThread:1467183 [sender.py:send():378] send: header
+2024-07-27 00:27:55,277 DEBUG   SenderThread:1467183 [sender.py:send():378] send: run
+2024-07-27 00:27:55,943 INFO    SenderThread:1467183 [dir_watcher.py:__init__():211] watching files in: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files
+2024-07-27 00:27:55,943 INFO    SenderThread:1467183 [sender.py:_start_run_threads():1123] run started: h3nugpnv with start time 1722014875.270766
+2024-07-27 00:27:55,952 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: check_version
+2024-07-27 00:27:55,953 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: check_version
+2024-07-27 00:27:56,238 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: run_start
+2024-07-27 00:27:56,243 DEBUG   HandlerThread:1467183 [system_info.py:__init__():26] System info init
+2024-07-27 00:27:56,243 DEBUG   HandlerThread:1467183 [system_info.py:__init__():41] System info init done
+2024-07-27 00:27:56,243 INFO    HandlerThread:1467183 [system_monitor.py:start():194] Starting system monitor
+2024-07-27 00:27:56,243 INFO    SystemMonitor:1467183 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-27 00:27:56,243 INFO    HandlerThread:1467183 [system_monitor.py:probe():214] Collecting system info
+2024-07-27 00:27:56,244 INFO    SystemMonitor:1467183 [interfaces.py:start():188] Started cpu monitoring
+2024-07-27 00:27:56,245 INFO    SystemMonitor:1467183 [interfaces.py:start():188] Started disk monitoring
+2024-07-27 00:27:56,246 INFO    SystemMonitor:1467183 [interfaces.py:start():188] Started gpu monitoring
+2024-07-27 00:27:56,247 INFO    SystemMonitor:1467183 [interfaces.py:start():188] Started memory monitoring
+2024-07-27 00:27:56,248 INFO    SystemMonitor:1467183 [interfaces.py:start():188] Started network monitoring
+2024-07-27 00:27:56,273 DEBUG   HandlerThread:1467183 [system_info.py:probe():150] Probing system
+2024-07-27 00:27:56,276 DEBUG   HandlerThread:1467183 [system_info.py:_probe_git():135] Probing git
+2024-07-27 00:27:56,283 DEBUG   HandlerThread:1467183 [system_info.py:_probe_git():143] Probing git done
+2024-07-27 00:27:56,284 DEBUG   HandlerThread:1467183 [system_info.py:probe():198] Probing system done
+2024-07-27 00:27:56,284 DEBUG   HandlerThread:1467183 [system_monitor.py:probe():223] {'os': 'Linux-5.19.0-46-generic-x86_64-with-glibc2.36', 'python': '3.10.7', 'heartbeatAt': '2024-07-26T17:27:56.274086', 'startedAt': '2024-07-26T17:27:55.266681', 'docker': None, 'cuda': None, 'args': ('--model_name', 'eub7without2'), 'state': 'running', 'program': '/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/MT-Chuyen/Eff-UNet_Breast_Tumor_Segmentation.git', 'commit': 'c72d4598b60e5d66083d93593893b497eab02916'}, 'email': 'gochuyen00@gmail.com', 'root': '/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation', 'host': 'exx-desktop', 'username': 'chuyenmt', 'executable': '/media/mountHDD2/chuyenmt/.env/bin/python3', 'cpu_count': 24, 'cpu_count_logical': 48, 'cpu_freq': {'current': 2274.0792291666667, 'min': 2200.0, 'max': 3800.0}, 'cpu_freq_per_core': [{'current': 2200.072, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2199.83, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2196.674, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 3604.7, 'min': 2200.0, 'max': 3800.0}, {'current': 2154.706, 'min': 2200.0, 'max': 3800.0}, {'current': 2224.633, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.077, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2199.18, 'min': 2200.0, 'max': 3800.0}, {'current': 2197.696, 'min': 2200.0, 'max': 3800.0}, {'current': 2202.965, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 3800.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2130.006, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}, {'current': 2199.729, 'min': 2200.0, 'max': 3800.0}, {'current': 2202.129, 'min': 2200.0, 'max': 3800.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3800.0}], 'disk': {'/': {'total': 927.3732490539551, 'used': 91.77436065673828}}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 251.5636863708496}}
+2024-07-27 00:27:56,284 INFO    HandlerThread:1467183 [system_monitor.py:probe():224] Finished collecting system info
+2024-07-27 00:27:56,284 INFO    HandlerThread:1467183 [system_monitor.py:probe():227] Publishing system info
+2024-07-27 00:27:56,284 INFO    HandlerThread:1467183 [system_monitor.py:probe():229] Finished publishing system info
+2024-07-27 00:27:56,289 DEBUG   SenderThread:1467183 [sender.py:send():378] send: files
+2024-07-27 00:27:56,289 INFO    SenderThread:1467183 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-07-27 00:27:56,433 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: python_packages
+2024-07-27 00:27:56,434 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: python_packages
+2024-07-27 00:27:56,434 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: stop_status
+2024-07-27 00:27:56,434 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: stop_status
+2024-07-27 00:27:56,764 DEBUG   SenderThread:1467183 [sender.py:send():378] send: telemetry
+2024-07-27 00:27:56,945 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/output.log
+2024-07-27 00:27:56,945 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/requirements.txt
+2024-07-27 00:27:56,945 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/wandb-metadata.json
+2024-07-27 00:27:57,138 INFO    wandb-upload_0:1467183 [upload_job.py:push():130] Uploaded file /tmp/tmpcjkmhgm1wandb/nrf6gx6n-wandb-metadata.json
+2024-07-27 00:27:57,969 DEBUG   SenderThread:1467183 [sender.py:send():378] send: exit
+2024-07-27 00:27:57,969 INFO    SenderThread:1467183 [sender.py:send_exit():585] handling exit code: 1
+2024-07-27 00:27:57,969 INFO    SenderThread:1467183 [sender.py:send_exit():587] handling runtime: 1
+2024-07-27 00:27:57,971 INFO    SenderThread:1467183 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-07-27 00:27:57,971 INFO    SenderThread:1467183 [sender.py:send_exit():593] send defer
+2024-07-27 00:27:57,971 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:57,971 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 0
+2024-07-27 00:27:57,971 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:57,972 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-07-27 00:27:57,972 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 1
+2024-07-27 00:27:57,972 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:57,972 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 1
+2024-07-27 00:27:57,972 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:57,972 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-07-27 00:27:57,972 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 2
+2024-07-27 00:27:57,972 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:57,972 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 2
+2024-07-27 00:27:57,972 INFO    HandlerThread:1467183 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-27 00:27:57,972 DEBUG   SystemMonitor:1467183 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-27 00:27:57,973 INFO    HandlerThread:1467183 [interfaces.py:finish():200] Joined cpu monitor
+2024-07-27 00:27:57,973 DEBUG   SystemMonitor:1467183 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-27 00:27:57,973 INFO    HandlerThread:1467183 [interfaces.py:finish():200] Joined disk monitor
+2024-07-27 00:27:57,973 DEBUG   SystemMonitor:1467183 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-27 00:27:58,171 INFO    HandlerThread:1467183 [interfaces.py:finish():200] Joined gpu monitor
+2024-07-27 00:27:58,171 INFO    HandlerThread:1467183 [interfaces.py:finish():200] Joined memory monitor
+2024-07-27 00:27:58,171 INFO    HandlerThread:1467183 [interfaces.py:finish():200] Joined network monitor
+2024-07-27 00:27:58,172 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,172 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-07-27 00:27:58,172 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 3
+2024-07-27 00:27:58,172 DEBUG   SenderThread:1467183 [sender.py:send():378] send: stats
+2024-07-27 00:27:58,172 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:58,172 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 3
+2024-07-27 00:27:58,172 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,173 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-07-27 00:27:58,173 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 4
+2024-07-27 00:27:58,173 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:58,173 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 4
+2024-07-27 00:27:58,173 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,173 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-07-27 00:27:58,173 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 5
+2024-07-27 00:27:58,173 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:58,173 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 5
+2024-07-27 00:27:58,173 DEBUG   SenderThread:1467183 [sender.py:send():378] send: summary
+2024-07-27 00:27:58,174 INFO    SenderThread:1467183 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-07-27 00:27:58,174 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,174 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-07-27 00:27:58,174 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 6
+2024-07-27 00:27:58,174 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:58,174 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 6
+2024-07-27 00:27:58,174 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,174 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-07-27 00:27:58,179 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: status_report
+2024-07-27 00:27:58,431 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 7
+2024-07-27 00:27:58,431 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:27:58,431 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 7
+2024-07-27 00:27:58,431 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:27:58,431 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-07-27 00:27:58,944 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/config.yaml
+2024-07-27 00:27:58,944 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/output.log
+2024-07-27 00:27:58,944 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/wandb-summary.json
+2024-07-27 00:27:58,969 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:00,786 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 8
+2024-07-27 00:28:00,787 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:00,787 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:00,787 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 8
+2024-07-27 00:28:00,787 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:00,787 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-07-27 00:28:00,788 INFO    SenderThread:1467183 [job_builder.py:build():432] Attempting to build job artifact
+2024-07-27 00:28:00,788 INFO    SenderThread:1467183 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-07-27 00:28:00,808 INFO    SenderThread:1467183 [job_builder.py:build():541] adding wandb-job metadata file
+2024-07-27 00:28:00,811 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 9
+2024-07-27 00:28:00,811 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:00,811 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 9
+2024-07-27 00:28:00,811 DEBUG   SenderThread:1467183 [sender.py:send():378] send: artifact
+2024-07-27 00:28:00,945 INFO    Thread-12 :1467183 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/output.log
+2024-07-27 00:28:00,970 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:03,829 INFO    SenderThread:1467183 [sender.py:send_artifact():1467] sent artifact job-https___github.com_MT-Chuyen_Eff-UNet_Breast_Tumor_Segmentation.git_main.py - {'id': 'QXJ0aWZhY3Q6MTA0MTM3NTQ5OA==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjMyNTQwOTgxNw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTA0MTM3NTQ5OA==', 'versionIndex': 3}}}
+2024-07-27 00:28:03,829 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:03,829 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-07-27 00:28:03,830 INFO    SenderThread:1467183 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-07-27 00:28:03,946 INFO    SenderThread:1467183 [dir_watcher.py:finish():388] scan: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files
+2024-07-27 00:28:03,946 INFO    SenderThread:1467183 [dir_watcher.py:finish():402] scan save: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/config.yaml config.yaml
+2024-07-27 00:28:03,947 INFO    SenderThread:1467183 [dir_watcher.py:finish():402] scan save: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/wandb-metadata.json wandb-metadata.json
+2024-07-27 00:28:03,947 INFO    SenderThread:1467183 [dir_watcher.py:finish():402] scan save: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/output.log output.log
+2024-07-27 00:28:03,947 INFO    SenderThread:1467183 [dir_watcher.py:finish():402] scan save: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/requirements.txt requirements.txt
+2024-07-27 00:28:03,947 INFO    SenderThread:1467183 [dir_watcher.py:finish():402] scan save: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/wandb-summary.json wandb-summary.json
+2024-07-27 00:28:03,952 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 10
+2024-07-27 00:28:03,952 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:03,953 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:03,956 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 10
+2024-07-27 00:28:03,959 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:03,959 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-07-27 00:28:03,959 INFO    SenderThread:1467183 [file_pusher.py:finish():169] shutting down file pusher
+2024-07-27 00:28:03,972 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:03,972 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:04,492 INFO    wandb-upload_1:1467183 [upload_job.py:push():130] Uploaded file /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/output.log
+2024-07-27 00:28:04,608 INFO    wandb-upload_2:1467183 [upload_job.py:push():130] Uploaded file /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/requirements.txt
+2024-07-27 00:28:04,744 INFO    wandb-upload_0:1467183 [upload_job.py:push():130] Uploaded file /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/config.yaml
+2024-07-27 00:28:04,760 INFO    wandb-upload_3:1467183 [upload_job.py:push():130] Uploaded file /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/files/wandb-summary.json
+2024-07-27 00:28:04,960 INFO    Thread-11 (_thread_body):1467183 [sender.py:transition_state():613] send defer: 11
+2024-07-27 00:28:04,960 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:04,961 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 11
+2024-07-27 00:28:04,961 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:04,961 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-07-27 00:28:04,961 INFO    SenderThread:1467183 [file_pusher.py:join():175] waiting for file pusher
+2024-07-27 00:28:04,961 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 12
+2024-07-27 00:28:04,961 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:04,962 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 12
+2024-07-27 00:28:04,962 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:04,962 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-07-27 00:28:04,962 INFO    SenderThread:1467183 [file_stream.py:finish():601] file stream finish called
+2024-07-27 00:28:04,973 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:05,188 INFO    SenderThread:1467183 [file_stream.py:finish():605] file stream finish is done
+2024-07-27 00:28:05,188 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 13
+2024-07-27 00:28:05,188 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:05,188 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:05,188 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 13
+2024-07-27 00:28:05,188 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:05,188 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-07-27 00:28:05,188 INFO    SenderThread:1467183 [sender.py:transition_state():613] send defer: 14
+2024-07-27 00:28:05,189 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: defer
+2024-07-27 00:28:05,189 INFO    HandlerThread:1467183 [handler.py:handle_request_defer():184] handle defer: 14
+2024-07-27 00:28:05,189 DEBUG   SenderThread:1467183 [sender.py:send():378] send: final
+2024-07-27 00:28:05,189 DEBUG   SenderThread:1467183 [sender.py:send():378] send: footer
+2024-07-27 00:28:05,189 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: defer
+2024-07-27 00:28:05,189 INFO    SenderThread:1467183 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-07-27 00:28:05,190 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:05,190 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:05,190 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: poll_exit
+2024-07-27 00:28:05,191 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: poll_exit
+2024-07-27 00:28:05,191 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: server_info
+2024-07-27 00:28:05,191 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: get_summary
+2024-07-27 00:28:05,191 DEBUG   SenderThread:1467183 [sender.py:send_request():405] send_request: server_info
+2024-07-27 00:28:05,194 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: sampled_history
+2024-07-27 00:28:05,194 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-27 00:28:05,402 INFO    MainThread:1467183 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-07-27 00:28:05,402 INFO    MainThread:1467183 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-07-27 00:28:05,402 INFO    MainThread:1467183 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-07-27 00:28:05,402 DEBUG   HandlerThread:1467183 [handler.py:handle_request():158] handle_request: shutdown
+2024-07-27 00:28:05,403 INFO    HandlerThread:1467183 [handler.py:finish():882] shutting down handler
+2024-07-27 00:28:06,191 INFO    WriterThread:1467183 [datastore.py:close():296] close: /media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20240727_002755-h3nugpnv/run-h3nugpnv.wandb
+2024-07-27 00:28:06,402 INFO    SenderThread:1467183 [sender.py:finish():1545] shutting down sender
+2024-07-27 00:28:06,402 INFO    SenderThread:1467183 [file_pusher.py:finish():169] shutting down file pusher
+2024-07-27 00:28:06,402 INFO    SenderThread:1467183 [file_pusher.py:join():175] waiting for file pusher

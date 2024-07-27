@@ -1,0 +1,23 @@
+252
+Training Samples: 202
+Testing Samples: 50
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 15, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 59, in trainer
+    model = get_method(args).to(device)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 135, in get_method
+    return UNetEfficientNetB7_without_sc2(n_classes=1)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 96, in __init__
+    super(UNetEfficientNetB7, self).__init__()
+TypeError: super(type, obj): obj must be an instance or subtype of type
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 15, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 59, in trainer
+    model = get_method(args).to(device)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 135, in get_method
+    return UNetEfficientNetB7_without_sc2(n_classes=1)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 96, in __init__
+    super(UNetEfficientNetB7, self).__init__()
+TypeError: super(type, obj): obj must be an instance or subtype of type

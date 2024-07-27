@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 12, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 22, in trainer
+    Data_transfered = WithAubumentations(root = data_path)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 55, in __init__
+    A.ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.1, rotate_limit=3, p=0.5, border_mode=cv2.BORDER_CONSTANT),
+NameError: name 'cv2' is not defined
