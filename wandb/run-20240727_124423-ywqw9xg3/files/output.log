@@ -1,0 +1,61 @@
+Data Set Setting Up
+252 252
+Training Samples: 202
+Testing Samples: 50
+252
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B7_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B7_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:25<00:00,  8.07it/s]
+ 62%|████████████████████████████████████████████████████████████████████████████▎                                              | 31/50 [00:01<00:00, 30.28it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 29.98it/s]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 202/202 [00:24<00:00,  8.19it/s]
+ 52%|███████████████████████████████████████████████████████████████▉                                                           | 26/50 [00:00<00:00, 29.56it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 29.88it/s]
+
+ 15%|██████████████████▋                                                                                                       | 31/202 [00:03<00:21,  7.89it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 12, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 74, in trainer
+    optimizer.step()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 75, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 391, in wrapper
+    out = func(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/adam.py", line 168, in step
+    adam(
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/adam.py", line 318, in adam
+    func(params,
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/adam.py", line 567, in _multi_tensor_adam
+    bias_correction1 = [1 - beta1 ** _get_value(step) for step in device_state_steps]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/adam.py", line 567, in <listcomp>
+    bias_correction1 = [1 - beta1 ** _get_value(step) for step in device_state_steps]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 89, in _get_value
+    return x.item()
+KeyboardInterrupt

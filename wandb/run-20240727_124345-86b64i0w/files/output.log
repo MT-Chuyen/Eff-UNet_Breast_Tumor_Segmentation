@@ -1,0 +1,34 @@
+Data Set Setting Up
+252 252
+Training Samples: 202
+Testing Samples: 50
+252
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B7_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B7_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+  0%|                                                                                                                                   | 0/202 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 12, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 65, in trainer
+    for train_img, train_mask in tqdm(train_dl):
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 419, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 419, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 103, in __getitem__
+    transformed = self.aug_transforms(image=resized['image'], mask=resized['mask'])
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/albumentations/core/composition.py", line 247, in __call__
+    self._check_args(**data)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/albumentations/core/composition.py", line 316, in _check_args
+    raise ValueError(msg)
+ValueError: Key image is not in available keys.

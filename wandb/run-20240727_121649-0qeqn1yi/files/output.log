@@ -1,0 +1,16 @@
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/pydantic/main.py:347: UserWarning: Pydantic serializer warnings:
+  Expected `Union[float, tuple[float, float]]` but got `list` - serialized value may not be as expected
+  Expected `Union[float, tuple[float, float]]` but got `list` - serialized value may not be as expected
+  Expected `Union[float, tuple[float, float]]` but got `list` - serialized value may not be as expected
+  Expected `Union[float, tuple[float, float]]` but got `list` - serialized value may not be as expected
+  return self.__pydantic_serializer__.to_python(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/albumentations/augmentations/mixing/transforms.py:133: UserWarning: No reference data provided for MixUp. This transform will act as a no-op.
+  warn("No reference data provided for MixUp. This transform will act as a no-op.")
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 12, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 26, in trainer
+    Data_transfered = WithAubumentations(root = data_path)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 66, in __init__
+    A.OverlayElements(p=0.2),
+AttributeError: module 'albumentations' has no attribute 'OverlayElements'

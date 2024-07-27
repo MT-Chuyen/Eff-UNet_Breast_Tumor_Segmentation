@@ -1,4 +1,4 @@
-from get_ds import Breast, WithAubumentations
+from get_ds import Breast, WithAubumentations, get_dataset
 import os
 from tqdm import tqdm
 import torch
@@ -11,7 +11,7 @@ from torch.utils.data.dataset import random_split
 import wandb
 import torch.nn.functional as F
 from sklearn.metrics import accuracy_score, jaccard_score
-
+from torchvision import transforms
 parameter_path = '/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/Training Parameter'
 data_path = '/media/mountHDD2/chuyenmt/BrEaST/BrEaST-Lesions_USG-images_and_masks'
 
@@ -23,16 +23,8 @@ def trainer(args):
         project="Eff-UNet",
         config=args,
     )
-    Data_transfered = WithAubumentations(root = data_path)
+    # Data_transfered = WithAubumentations(root = data_path)
 
-    train_ds, test_ds = random_split(Data_transfered, [0.8, 0.2])
-
-    train_dl = DataLoader(train_ds, batch_size=1, shuffle=True)
-    test_dl = DataLoader(test_ds, batch_size=1, shuffle=True)
-
-    print("Training Samples: {}".format(len(train_ds)))
-    print("Testing Samples: {}".format(len(test_ds)))
-    print(len(Data_transfered))
     # transform = transforms.Compose(
     #     [
     #         transforms.Resize((256, 256)),
@@ -40,16 +32,22 @@ def trainer(args):
 
     #     ]
     # )
-
     # target_transform = transforms.Compose(
     #     [
     #         transforms.Resize((256, 256)),
     #         transforms.ToTensor(),
     #     ]
     # )
+    # Data_transfered = Breast(root = data_path,transform = transform, target_transform=target_transform)
+    Data_transfered = get_dataset(args)
 
-    # Data_transfered = Breast(root =root,transform = transform, target_transform=target_transform)
-    # print(len(Data_transfered))
+    train_ds, test_ds = random_split(Data_transfered, [0.8, 0.2])
+    train_dl = DataLoader(train_ds, batch_size=1, shuffle=True)
+    test_dl = DataLoader(test_ds, batch_size=1, shuffle=True)
+
+    print("Training Samples: {}".format(len(train_ds)))
+    print("Testing Samples: {}".format(len(test_ds)))
+    print(len(Data_transfered))
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu", index = 1)
     model = get_method(args).to(device)

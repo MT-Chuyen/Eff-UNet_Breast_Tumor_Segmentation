@@ -44,7 +44,16 @@ class OnlyUp(nn.Module):
     def forward(self, x):
         x1 = self.up(x)
         return self.conv(x1)
-    
+class Down(nn.Module):
+  def __init__(self, in_channels, out_channels):
+    super().__init__()
+    self.down = nn.Sequential(
+        nn.MaxPool2d(2),
+        DoubleConv(in_channels, out_channels),
+    )
+  def forward(self, x):
+     return self.down(x)
+  
 class OutConv(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(OutConv, self).__init__()
@@ -52,6 +61,35 @@ class OutConv(nn.Module):
 
     def forward(self, x):
         return self.conv(x)
+class Unet(nn.Module):
+    def __init__(self, n_channels, n_classes):
+        super().__init__()
+        self.doubleconv = DoubleConv(n_channels, 64)
+        self.down1 = Down(64, 128)
+        self.down2 = Down(128, 256)
+        self.down3 = Down(256,512)
+        self.down4 = Down(512, 1024)
+
+        self.up1 = Up(1024, 512)
+        self.up2 = Up(512, 256)
+        self.up3 = Up(256, 128)
+        self.up4 = Up(128, 64)
+
+        self.out = OutConv(64, n_classes)
+
+    def forward(self,x ):
+        x1 = self.doubleconv(x)
+        x2 = self.down1(x1)
+        x3 = self.down2(x2)
+        x4 = self.down3(x3)
+        x5 = self.down4(x4)
+        x= self.up1(x5, x4)
+        x= self.up2(x, x3)
+        x= self.up3(x, x2)
+        x= self.up4(x, x1)
+        logits = self.out(x)
+        return logits
+    
 
 class UNetEfficientNetB7(nn.Module):
     def __init__(self, n_classes):
@@ -144,8 +182,8 @@ class UNetEfficientNetB7_without_sc3(nn.Module):
         self.up1 = Up(3200, 256)
         self.up2 = Up(480, 128)
         self.up3 = Up(208, 64)
-        self.up4 = Up(64 + 32, 32)
-        self.up5 = OnlyUp(32, 32)
+        self.up4 = OnlyUp(64 + 32, 32)
+        self.up5 = Up(32+64, 32)
 
         self.out = OutConv(32, n_classes)
 
@@ -160,8 +198,8 @@ class UNetEfficientNetB7_without_sc3(nn.Module):
         x = self.up1(x6, x5)
         x = self.up2(x, x4)
         x = self.up3(x, x3)
-        x = self.up4(x, x2)
-        x = self.up5(x)
+        x = self.up4(x)
+        x = self.up5(x, x1)
 
         logits = self.out(x)
         return logits
@@ -243,13 +281,15 @@ class UNetEfficientNetB7_without_sc6(nn.Module):
         return logits
     
 def get_method(args):
-    if args.model_name == "eub7":
+    if args.model == "eub7":
         return UNetEfficientNetB7(n_classes= 1)
-    if args.model_name == "eub7without2":
+    if args.model == "eub7without2":
         return UNetEfficientNetB7_without_sc2(n_classes=1)
-    if args.model_name == "eub7without3":
+    if args.model == "eub7without3":
         return UNetEfficientNetB7_without_sc3(n_classes=1)
-    if args.model_name == "eub7without4":
+    if args.model == "eub7without4":
         return UNetEfficientNetB7_without_sc4(n_classes=1)
-    if args.model_name == "eub7without6":
+    if args.model == "eub7without6":
         return UNetEfficientNetB7_without_sc6(n_classes=1)
+    if args.model == 'unet':
+        return Unet(3,1)
