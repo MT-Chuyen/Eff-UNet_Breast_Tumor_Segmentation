@@ -165,12 +165,11 @@ def trainer(args):
     print(f"Test Loss: {mean_test_loss}")
     print(f"Test Dice Coefficient: {mean_test_dice}")
     print(f"Test IoU: {mean_test_iou}")
-    
+
     test__metrics = {
         'test/test_loss': mean_test_loss,
         'test/test_dice': mean_test_dice,
         'test/iou': mean_test_iou,
-
     }
     wandb.log(test__metrics)
 
