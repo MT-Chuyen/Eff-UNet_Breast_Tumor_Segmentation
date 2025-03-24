@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:47:52.377921489+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:47:52.3779462+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_234752-keqfdk4k/logs/debug-core.log"}
+{"time":"2025-01-16T23:47:52.484856194+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:47:52.491635869+07:00","level":"INFO","msg":"created new stream","id":"keqfdk4k"}
+{"time":"2025-01-16T23:47:52.49167375+07:00","level":"INFO","msg":"stream: started","id":"keqfdk4k"}
+{"time":"2025-01-16T23:47:52.49170402+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:52.49168788+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:52.49169681+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:52.872697291+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:47:52.87329566+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:47:56.647504185+07:00","level":"INFO","msg":"stream: closing","id":"keqfdk4k"}
+{"time":"2025-01-16T23:47:56.647539596+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:47:56.657324803+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:47:57.962302595+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:47:58.335381614+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:58.335418005+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:58.335430155+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"keqfdk4k"}}
+{"time":"2025-01-16T23:47:58.335497496+07:00","level":"INFO","msg":"stream: closed","id":"keqfdk4k"}

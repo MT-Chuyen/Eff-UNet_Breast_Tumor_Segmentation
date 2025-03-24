@@ -1,0 +1,55 @@
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/albumentations/core/validation.py:87: UserWarning: ShiftScaleRotate is a special case of Affine transform. Please use Affine transform instead.
+  original_init(self, **validated_kwargs)
+/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py:64: UserWarning: Argument(s) 'alpha_affine' are not valid for transform ElasticTransform
+  A.ElasticTransform(alpha=1, sigma=50, alpha_affine=50, p=0.5),
+Data Set Setting Up
+252 252
+Training Samples: 202
+Testing Samples: 50
+252
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:14<00:00,  1.82it/s]
+ 57%|███████████████████████████████████████████████████████████████████████▍                                                     | 4/7 [00:01<00:00,  3.86it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 89, in trainer
+    for valid_img, valid_mask in tqdm(test_dl):
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 96, in __getitem__
+    image = Image.open(self._images[idx]).convert("RGB")
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/Image.py", line 3442, in open
+    prefix = fp.read(16)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 89, in trainer
+    for valid_img, valid_mask in tqdm(test_dl):
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 96, in __getitem__
+    image = Image.open(self._images[idx]).convert("RGB")
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/Image.py", line 3442, in open
+    prefix = fp.read(16)
+KeyboardInterrupt

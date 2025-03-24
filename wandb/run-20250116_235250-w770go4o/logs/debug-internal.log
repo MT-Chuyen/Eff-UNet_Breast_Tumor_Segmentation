@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:52:50.201674932+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:52:50.201696512+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_235250-w770go4o/logs/debug-core.log"}
+{"time":"2025-01-16T23:52:50.249903079+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:52:50.264304312+07:00","level":"INFO","msg":"created new stream","id":"w770go4o"}
+{"time":"2025-01-16T23:52:50.264352703+07:00","level":"INFO","msg":"stream: started","id":"w770go4o"}
+{"time":"2025-01-16T23:52:50.264374013+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:50.264400424+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:50.264357373+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:50.656311436+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:52:50.656984117+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:52:52.998239295+07:00","level":"INFO","msg":"stream: closing","id":"w770go4o"}
+{"time":"2025-01-16T23:52:52.998268765+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:52:53.009107326+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:52:54.497248751+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:52:54.828358508+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:54.828411739+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:54.828416029+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"w770go4o"}}
+{"time":"2025-01-16T23:52:54.828507181+07:00","level":"INFO","msg":"stream: closed","id":"w770go4o"}

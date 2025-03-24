@@ -10,40 +10,39 @@ from model import get_method
 from torch.utils.data.dataset import random_split
 import wandb
 import torch.nn.functional as F
-from sklearn.metrics import accuracy_score, jaccard_score
-from torchvision import transforms
+from sklearn.metrics import jaccard_score
+import numpy as np
+import argparse
+
+
 parameter_path = '/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/Training Parameter'
-data_path = '/media/mountHDD2/chuyenmt/BrEaST/BrEaST-Lesions_USG-images_and_masks'
+data_path = '/media/mountHDD3/data_storage/biomedical_data/Dataset/BrEaST/BrEaST-Lesions_USG-images_and_masks-Dec-15-2023/BrEaST-Lesions_USG-images_and_masks'
 
- 
+# Hàm tính IoU
+def calculate_iou(pred, target):
+    pred = (torch.sigmoid(pred) > 0.5).float()
+    intersection = (pred * target).sum(dim=(2, 3))
+    union = (pred.sum(dim=(2, 3)) + target.sum(dim=(2, 3))) - intersection
+    iou = (intersection + 1e-6) / (union + 1e-6)
+    return iou.mean().item()
 
+def dice_coefficient(pred, target): # Hàm tính toán Dice coefficient
+    smooth = 1e-6
+    pred = (torch.sigmoid(pred) > 0.5).float()
+    intersection = (pred * target).sum(dim = (2,3))
+    return ((2. * intersection + smooth) / (pred.sum(dim = (2,3)) + target.sum(dim = (2,3)) + smooth)).mean().item()
+    
 def trainer(args):
-
     wandb.init(
         project="Eff-UNet",
         config=args,
     )
-    # Data_transfered = WithAubumentations(root = data_path)
 
-    # transform = transforms.Compose(
-    #     [
-    #         transforms.Resize((256, 256)),
-    #         transforms.ToTensor(),
-
-    #     ]
-    # )
-    # target_transform = transforms.Compose(
-    #     [
-    #         transforms.Resize((256, 256)),
-    #         transforms.ToTensor(),
-    #     ]
-    # )
-    # Data_transfered = Breast(root = data_path,transform = transform, target_transform=target_transform)
     Data_transfered = get_dataset(args)
 
     train_ds, test_ds = random_split(Data_transfered, [0.8, 0.2])
-    train_dl = DataLoader(train_ds, batch_size=1, shuffle=True)
-    test_dl = DataLoader(test_ds, batch_size=1, shuffle=True)
+    train_dl = DataLoader(train_ds, batch_size=8, shuffle=True) # Use batch size
+    test_dl = DataLoader(test_ds, batch_size=8, shuffle=True) # Use batch size
 
     print("Training Samples: {}".format(len(train_ds)))
     print("Testing Samples: {}".format(len(test_ds)))
@@ -58,7 +57,7 @@ def trainer(args):
     
     old_loss = 1e26
     best_dct = None
-    last_dst = None
+    last_dct = None
     #Training
     for epoch in range(epochs):
         model.train()
@@ -120,16 +119,10 @@ def trainer(args):
 
         print(f"Epoch: {epoch + 1} - TrainLoss: {mean_train_loss} - ValidLoss: {mean_valid_loss}")
 
-    torch.save(best_dct, os.path.join(parameter_path, args.model_name))
+    torch.save(best_dct, os.path.join(parameter_path, f'{args.model}.pth'))
 
-    #Testing
-    def dice_coefficient(pred, target): # Hàm tính toán Dice coefficient
-        smooth = 1e-6
-        pred = torch.sigmoid(pred)
-        pred = (pred > 0.5).float()
-        intersection = (pred * target).sum()
-        return (2. * intersection + smooth) / (pred.sum() + target.sum() + smooth)
-
+    # Testing
+    model.load_state_dict(best_dct) #Load best model before test
     model.eval()
     test_total_loss = 0
     test_total_dice = 0
@@ -138,23 +131,18 @@ def trainer(args):
 
     with torch.no_grad():
         for test_img, test_mask in tqdm(test_dl):
-            test_img = test_img
-            test_mask = test_mask
+            test_img = test_img.to(device)
+            test_mask = test_mask.to(device)
 
             test_gen_mask = model(test_img)
             test_loss = loss_fn(test_gen_mask, test_mask)
+            test_total_loss += test_loss.item()
 
-            test_total_loss += test_loss.cpu().item()
-            test_total_dice += dice_coefficient(test_gen_mask, test_mask).cpu().item()
+            test_total_dice += dice_coefficient(test_gen_mask, test_mask)
 
-            # Chuyển đổi dự đoán thành nhị phân
-            binary_test_gen_mask = (torch.sigmoid(test_gen_mask) > 0.5).float()
-
-            # Ensure both arrays are binary by thresholding test_mask
-            binary_test_mask = (test_mask > 0.5).float()
-
-            test_total_iou += jaccard_score(binary_test_mask.cpu().numpy().flatten(),
-                                        binary_test_gen_mask.cpu().numpy().flatten())
+            # Calculate IoU
+            test_total_iou += calculate_iou(test_gen_mask, test_mask)
+            
 
     mean_test_loss = test_total_loss / num_batches
     mean_test_dice = test_total_dice / num_batches
@@ -173,5 +161,4 @@ def trainer(args):
 
     wandb.finish()
 
-     
  

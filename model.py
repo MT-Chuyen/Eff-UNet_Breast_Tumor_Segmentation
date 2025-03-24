@@ -1,295 +1,181 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torchvision import models
+from collections import OrderedDict
+from layers import *
+from efficientnet import EfficientNet
 
-class DoubleConv(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(DoubleConv, self).__init__()
-        self.dv = nn.Sequential(
-            nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(inplace=True),
-        )
 
-    def forward(self, x):
-        return self.dv(x)
+__all__ = ['EfficientUnet', 'get_efficientunet_b0', 'get_efficientunet_b1', 'get_efficientunet_b2',
+           'get_efficientunet_b3', 'get_efficientunet_b4', 'get_efficientunet_b5', 'get_efficientunet_b6',
+           'get_efficientunet_b7']
 
-class Up(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(Up, self).__init__()
-        self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
-        self.conv = DoubleConv(in_channels, out_channels)
 
-    def forward(self, x1, x2):
-        x1 = self.up(x1)
-        diffX = x2.size()[3] - x1.size()[3]
-        diffY = x2.size()[2] - x1.size()[2]
-        x1 = F.pad(x1, [
-            diffX // 2, diffX - diffX // 2,
-            diffY // 2, diffY - diffY // 2
-        ])
-        x = torch.cat([x2, x1], dim=1)
-        return self.conv(x)
-    
-class OnlyUp(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(OnlyUp, self).__init__()
-        self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
-        self.conv = DoubleConv(in_channels, out_channels)
+def get_blocks_to_be_concat(model, x):
+    shapes = set()
+    blocks = OrderedDict()
+    hooks = []
+    count = 0
 
-    def forward(self, x):
-        x1 = self.up(x)
-        return self.conv(x1)
-class Down(nn.Module):
-  def __init__(self, in_channels, out_channels):
-    super().__init__()
-    self.down = nn.Sequential(
-        nn.MaxPool2d(2),
-        DoubleConv(in_channels, out_channels),
-    )
-  def forward(self, x):
-     return self.down(x)
-  
-class OutConv(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(OutConv, self).__init__()
-        self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=1)
+    def register_hook(module):
 
-    def forward(self, x):
-        return self.conv(x)
-class Unet(nn.Module):
-    def __init__(self, n_channels, n_classes):
+        def hook(module, input, output):
+            try:
+                nonlocal count
+                if module.name == f'blocks_{count}_output_batch_norm':
+                    count += 1
+                    shape = output.size()[-2:]
+                    if shape not in shapes:
+                        shapes.add(shape)
+                        blocks[module.name] = output
+
+                elif module.name == 'head_swish':
+                    # when module.name == 'head_swish', it means the program has already got all necessary blocks for
+                    # concatenation. In my dynamic unet implementation, I first upscale the output of the backbone,
+                    # (in this case it's the output of 'head_swish') concatenate it with a block which has the same
+                    # Height & Width (image size). Therefore, after upscaling, the output of 'head_swish' has bigger
+                    # image size. The last block has the same image size as 'head_swish' before upscaling. So we don't
+                    # really need the last block for concatenation. That's why I wrote `blocks.popitem()`.
+                    blocks.popitem()
+                    blocks[module.name] = output
+
+            except AttributeError:
+                pass
+
+        if (
+                not isinstance(module, nn.Sequential)
+                and not isinstance(module, nn.ModuleList)
+                and not (module == model)
+        ):
+            hooks.append(module.register_forward_hook(hook))
+
+    # register hook
+    model.apply(register_hook)
+
+    # make a forward pass to trigger the hooks
+    model(x)
+
+    # remove these hooks
+    for h in hooks:
+        h.remove()
+
+    return blocks
+
+
+class EfficientUnet(nn.Module):
+    def __init__(self, encoder, out_channels=2, concat_input=True):
         super().__init__()
-        self.doubleconv = DoubleConv(n_channels, 64)
-        self.down1 = Down(64, 128)
-        self.down2 = Down(128, 256)
-        self.down3 = Down(256,512)
-        self.down4 = Down(512, 1024)
 
-        self.up1 = Up(1024, 512)
-        self.up2 = Up(512, 256)
-        self.up3 = Up(256, 128)
-        self.up4 = Up(128, 64)
+        self.encoder = encoder
+        self.concat_input = concat_input
 
-        self.out = OutConv(64, n_classes)
+        self.up_conv1 = up_conv(self.n_channels, 512)
+        self.double_conv1 = double_conv(self.size[0], 512)
+        self.up_conv2 = up_conv(512, 256)
+        self.double_conv2 = double_conv(self.size[1], 256)
+        self.up_conv3 = up_conv(256, 128)
+        self.double_conv3 = double_conv(self.size[2], 128)
+        self.up_conv4 = up_conv(128, 64)
+        self.double_conv4 = double_conv(self.size[3], 64)
 
-    def forward(self,x ):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x1)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x= self.up1(x5, x4)
-        x= self.up2(x, x3)
-        x= self.up3(x, x2)
-        x= self.up4(x, x1)
-        logits = self.out(x)
-        return logits
-    
+        if self.concat_input:
+            self.up_conv_input = up_conv(64, 32)
+            self.double_conv_input = double_conv(self.size[4], 32)
 
-class UNetEfficientNetB7(nn.Module):
-    def __init__(self, n_classes):
-        super(UNetEfficientNetB7, self).__init__()
-        self.encoder = models.efficientnet_b7(pretrained=True).features
+        self.final_conv = nn.Conv2d(self.size[5], out_channels, kernel_size=1)
 
-        self.doubleconv = DoubleConv(3, 64)
-        self.down1 = self.encoder[:2]   # Output: 32 channels
-        self.down2 = self.encoder[2:4]  # Output: 48 channels
-        self.down3 = self.encoder[4:6]  # Output: 80 channels
-        self.down4 = self.encoder[6:8]  # Output: 224 channels
-        self.down5 = self.encoder[8:]   # Output: 640 channels
+    @property
+    def n_channels(self):
+        n_channels_dict = {'efficientnet-b0': 1280, 'efficientnet-b1': 1280, 'efficientnet-b2': 1408,
+                           'efficientnet-b3': 1536, 'efficientnet-b4': 1792, 'efficientnet-b5': 2048,
+                           'efficientnet-b6': 2304, 'efficientnet-b7': 2560}
+        return n_channels_dict[self.encoder.name]
 
-        self.up1 = Up(3200, 256)
-        self.up2 = Up(480, 128)
-        self.up3 = Up(208, 64)
-        self.up4 = Up(64 + 32, 32)
-        self.up5 = Up(32 + 64, 32)
-
-        self.out = OutConv(32, n_classes)
+    @property
+    def size(self):
+        size_dict = {'efficientnet-b0': [592, 296, 152, 80, 35, 32], 'efficientnet-b1': [592, 296, 152, 80, 35, 32],
+                     'efficientnet-b2': [600, 304, 152, 80, 35, 32], 'efficientnet-b3': [608, 304, 160, 88, 35, 32],
+                     'efficientnet-b4': [624, 312, 160, 88, 35, 32], 'efficientnet-b5': [640, 320, 168, 88, 35, 32],
+                     'efficientnet-b6': [656, 328, 168, 96, 35, 32], 'efficientnet-b7': [672, 336, 176, 96, 35, 32]}
+        return size_dict[self.encoder.name]
 
     def forward(self, x):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x6 = self.down5(x5)
+        input_ = x
 
-        x = self.up1(x6, x5)
-        x = self.up2(x, x4)
-        x = self.up3(x, x3)
-        x = self.up4(x, x2)
-        x = self.up5(x, x1)
+        blocks = get_blocks_to_be_concat(self.encoder, x)
+        _, x = blocks.popitem()
 
-        logits = self.out(x)
-        return logits
+        x = self.up_conv1(x)
+        x = torch.cat([x, blocks.popitem()[1]], dim=1)
+        x = self.double_conv1(x)
 
+        x = self.up_conv2(x)
+        x = torch.cat([x, blocks.popitem()[1]], dim=1)
+        x = self.double_conv2(x)
 
-class UNetEfficientNetB7_without_sc2(nn.Module):
-    def __init__(self, n_classes):
-        super(UNetEfficientNetB7_without_sc2, self).__init__()
-        self.encoder = models.efficientnet_b7(pretrained=True).features
+        x = self.up_conv3(x)
+        x = torch.cat([x, blocks.popitem()[1]], dim=1)
+        x = self.double_conv3(x)
 
-        self.doubleconv = DoubleConv(3, 64)
-        self.down1 = self.encoder[:2]   # Output: 32 channels
-        self.down2 = self.encoder[2:4]  # Output: 48 channels
-        self.down3 = self.encoder[4:6]  # Output: 80 channels
-        self.down4 = self.encoder[6:8]  # Output: 224 channels
-        self.down5 = self.encoder[8:]   # Output: 640 channels
+        x = self.up_conv4(x)
+        x = torch.cat([x, blocks.popitem()[1]], dim=1)
+        x = self.double_conv4(x)
 
-        self.up1 = Up(3200, 256)
-        self.up2 = Up(480, 128)
-        self.up3 = Up(208, 64)
-        self.up4 = Up(64 + 32, 32)
-        self.up5 = OnlyUp(32, 32)
+        if self.concat_input:
+            x = self.up_conv_input(x)
+            x = torch.cat([x, input_], dim=1)
+            x = self.double_conv_input(x)
 
-        self.out = OutConv(32, n_classes)
+        x = self.final_conv(x)
 
-    def forward(self, x):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x6 = self.down5(x5)
-
-        x = self.up1(x6, x5)
-        x = self.up2(x, x4)
-        x = self.up3(x, x3)
-        x = self.up4(x, x2)
-        x = self.up5(x)
-
-        logits = self.out(x)
-        return logits
+        return x
 
 
-class UNetEfficientNetB7_without_sc3(nn.Module):
-    def __init__(self, n_classes):
-        super(UNetEfficientNetB7_without_sc2, self).__init__()
-        self.encoder = models.efficientnet_b7(pretrained=True).features
-
-        self.doubleconv = DoubleConv(3, 64)
-        self.down1 = self.encoder[:2]   # Output: 32 channels
-        self.down2 = self.encoder[2:4]  # Output: 48 channels
-        self.down3 = self.encoder[4:6]  # Output: 80 channels
-        self.down4 = self.encoder[6:8]  # Output: 224 channels
-        self.down5 = self.encoder[8:]   # Output: 640 channels
-
-        self.up1 = Up(3200, 256)
-        self.up2 = Up(480, 128)
-        self.up3 = Up(208, 64)
-        self.up4 = OnlyUp(64 + 32, 32)
-        self.up5 = Up(32+64, 32)
-
-        self.out = OutConv(32, n_classes)
-
-    def forward(self, x):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x6 = self.down5(x5)
-
-        x = self.up1(x6, x5)
-        x = self.up2(x, x4)
-        x = self.up3(x, x3)
-        x = self.up4(x)
-        x = self.up5(x, x1)
-
-        logits = self.out(x)
-        return logits
+def get_efficientunet_b0(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b0', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
 
-class UNetEfficientNetB7_without_sc4(nn.Module):
-    def __init__(self, n_classes):
-        super(UNetEfficientNetB7_without_sc2, self).__init__()
-        self.encoder = models.efficientnet_b7(pretrained=True).features
+def get_efficientunet_b1(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b1', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-        self.doubleconv = DoubleConv(3, 64)
-        self.down1 = self.encoder[:2]   # Output: 32 channels
-        self.down2 = self.encoder[2:4]  # Output: 48 channels
-        self.down3 = self.encoder[4:6]  # Output: 80 channels
-        self.down4 = self.encoder[6:8]  # Output: 224 channels
-        self.down5 = self.encoder[8:]   # Output: 640 channels
 
-        self.up1 = Up(3200, 256)
-        self.up2 = Up(480, 128)
-        self.up3 = Up(208, 64)
-        self.up4 = Up(64 + 32, 32)
-        self.up5 = OnlyUp(32, 32)
+def get_efficientunet_b2(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b2', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-        self.out = OutConv(32, n_classes)
 
-    def forward(self, x):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x6 = self.down5(x5)
+def get_efficientunet_b3(out_channels=1, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b3', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-        x = self.up1(x6, x5)
-        x = self.up2(x, x4)
-        x = self.up3(x, x3)
-        x = self.up4(x, x2)
-        x = self.up5(x)
 
-        logits = self.out(x)
-        return logits
-    
+def get_efficientunet_b4(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b4', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-class UNetEfficientNetB7_without_sc6(nn.Module):
-    def __init__(self, n_classes):
-        super(UNetEfficientNetB7_without_sc2, self).__init__()
-        self.encoder = models.efficientnet_b7(pretrained=True).features
 
-        self.doubleconv = DoubleConv(3, 64)
-        self.down1 = self.encoder[:2]   # Output: 32 channels
-        self.down2 = self.encoder[2:4]  # Output: 48 channels
-        self.down3 = self.encoder[4:6]  # Output: 80 channels
-        self.down4 = self.encoder[6:8]  # Output: 224 channels
-        self.down5 = self.encoder[8:]   # Output: 640 channels
+def get_efficientunet_b5(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b5', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-        self.up1 = Up(3200, 256)
-        self.up2 = Up(480, 128)
-        self.up3 = Up(208, 64)
-        self.up4 = Up(64 + 32, 32)
-        self.up5 = OnlyUp(32, 32)
 
-        self.out = OutConv(32, n_classes)
+def get_efficientunet_b6(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b6', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-    def forward(self, x):
-        x1 = self.doubleconv(x)
-        x2 = self.down1(x)
-        x3 = self.down2(x2)
-        x4 = self.down3(x3)
-        x5 = self.down4(x4)
-        x6 = self.down5(x5)
 
-        x = self.up1(x6, x5)
-        x = self.up2(x, x4)
-        x = self.up3(x, x3)
-        x = self.up4(x, x2)
-        x = self.up5(x)
+def get_efficientunet_b7(out_channels=2, concat_input=True, pretrained=True):
+    encoder = EfficientNet.encoder('efficientnet-b7', pretrained=pretrained)
+    model = EfficientUnet(encoder, out_channels=out_channels, concat_input=concat_input)
+    return model
 
-        logits = self.out(x)
-        return logits
-    
 def get_method(args):
-    if args.model == "eub7":
-        return UNetEfficientNetB7(n_classes= 1)
-    if args.model == "eub7without2":
-        return UNetEfficientNetB7_without_sc2(n_classes=1)
-    if args.model == "eub7without3":
-        return UNetEfficientNetB7_without_sc3(n_classes=1)
-    if args.model == "eub7without4":
-        return UNetEfficientNetB7_without_sc4(n_classes=1)
-    if args.model == "eub7without6":
-        return UNetEfficientNetB7_without_sc6(n_classes=1)
-    if args.model == 'unet':
-        return Unet(3,1)
+    if args.model == "eub3":
+        return get_efficientunet_b0(out_channels=1)
+ 

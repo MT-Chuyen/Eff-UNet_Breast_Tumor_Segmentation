@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:43:08.078268214+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:43:08.078297874+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_234308-4jtkl62y/logs/debug-core.log"}
+{"time":"2025-01-16T23:43:08.222786239+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:43:08.234435343+07:00","level":"INFO","msg":"created new stream","id":"4jtkl62y"}
+{"time":"2025-01-16T23:43:08.234485984+07:00","level":"INFO","msg":"stream: started","id":"4jtkl62y"}
+{"time":"2025-01-16T23:43:08.234519954+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:08.234535285+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:08.234506964+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:08.649900245+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:43:08.650736437+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:43:08.851752778+07:00","level":"INFO","msg":"stream: closing","id":"4jtkl62y"}
+{"time":"2025-01-16T23:43:08.851798869+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:43:08.860937457+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:43:10.894348748+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:43:11.349782482+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:11.349848693+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:11.349859943+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"4jtkl62y"}}
+{"time":"2025-01-16T23:43:11.349953905+07:00","level":"INFO","msg":"stream: closed","id":"4jtkl62y"}

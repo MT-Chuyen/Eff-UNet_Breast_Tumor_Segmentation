@@ -1,0 +1,24 @@
+Data Set Setting Up
+536 536
+Training Samples: 429
+Testing Samples: 107
+536
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B7_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B7_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+  0%|                                                                                                                                    | 0/429 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main_volcalfolds.py", line 10, in <module>
+    trainer_vocalfolds(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/train_vocalfolds.py", line 73, in trainer_vocalfolds
+    train_loss = loss_fn(train_gen_mask, train_mask)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 1185, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: only batches of spatial targets supported (3D tensors) but got targets of size: : [1, 7, 256, 256]

@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:50:01.563731073+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:50:01.563753034+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_235001-idvk8zwx/logs/debug-core.log"}
+{"time":"2025-01-16T23:50:01.620473531+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:50:01.629862093+07:00","level":"INFO","msg":"created new stream","id":"idvk8zwx"}
+{"time":"2025-01-16T23:50:01.629898924+07:00","level":"INFO","msg":"stream: started","id":"idvk8zwx"}
+{"time":"2025-01-16T23:50:01.629933354+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:01.629916704+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:01.629924984+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:02.029260972+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:50:02.029819409+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:50:05.061582985+07:00","level":"INFO","msg":"stream: closing","id":"idvk8zwx"}
+{"time":"2025-01-16T23:50:05.061617806+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:50:05.069134962+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:50:06.362013867+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:50:06.684683606+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:06.684734647+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:06.684725166+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"idvk8zwx"}}
+{"time":"2025-01-16T23:50:06.684830008+07:00","level":"INFO","msg":"stream: closed","id":"idvk8zwx"}

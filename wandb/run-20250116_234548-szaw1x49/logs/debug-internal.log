@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:45:48.455047099+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:45:48.455064999+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_234548-szaw1x49/logs/debug-core.log"}
+{"time":"2025-01-16T23:45:48.579532141+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:45:48.588559528+07:00","level":"INFO","msg":"created new stream","id":"szaw1x49"}
+{"time":"2025-01-16T23:45:48.588606739+07:00","level":"INFO","msg":"stream: started","id":"szaw1x49"}
+{"time":"2025-01-16T23:45:48.588622859+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:48.588649729+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:48.588635859+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:49.01780041+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:45:49.018785394+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:45:51.320119907+07:00","level":"INFO","msg":"stream: closing","id":"szaw1x49"}
+{"time":"2025-01-16T23:45:51.320151828+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:45:51.329078083+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:45:52.912794766+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:45:53.240674631+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:53.240740742+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:53.240747252+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"szaw1x49"}}
+{"time":"2025-01-16T23:45:53.240806142+07:00","level":"INFO","msg":"stream: closed","id":"szaw1x49"}

@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:51:07.75954343+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:51:07.75956394+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_235107-0ca612r3/logs/debug-core.log"}
+{"time":"2025-01-16T23:51:07.865240442+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:51:07.873751256+07:00","level":"INFO","msg":"created new stream","id":"0ca612r3"}
+{"time":"2025-01-16T23:51:07.873785387+07:00","level":"INFO","msg":"stream: started","id":"0ca612r3"}
+{"time":"2025-01-16T23:51:07.873812117+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:07.873796857+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:07.873820948+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:08.254226324+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:51:08.254895716+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:51:10.681140174+07:00","level":"INFO","msg":"stream: closing","id":"0ca612r3"}
+{"time":"2025-01-16T23:51:10.681175804+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:51:10.688839054+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:51:12.201888838+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:51:12.53196991+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:12.532033671+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:12.531854567+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"0ca612r3"}}
+{"time":"2025-01-16T23:51:12.533276183+07:00","level":"INFO","msg":"stream: closed","id":"0ca612r3"}

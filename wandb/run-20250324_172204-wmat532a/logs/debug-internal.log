@@ -1,0 +1,13 @@
+{"time":"2025-03-24T17:22:04.092810579+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-03-24T17:22:04.092831499+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250324_172204-wmat532a/logs/debug-core.log"}
+{"time":"2025-03-24T17:22:04.115190817+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-03-24T17:22:04.148910001+07:00","level":"INFO","msg":"created new stream","id":"wmat532a"}
+{"time":"2025-03-24T17:22:04.148938242+07:00","level":"INFO","msg":"stream: started","id":"wmat532a"}
+{"time":"2025-03-24T17:22:04.148962092+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"wmat532a"}}
+{"time":"2025-03-24T17:22:04.148954082+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wmat532a"}}
+{"time":"2025-03-24T17:22:04.148965342+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wmat532a"}}
+{"time":"2025-03-24T17:22:04.600515342+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-03-24T17:22:04.601301264+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-24T17:22:25.476396939+07:00","level":"INFO","msg":"stream: closing","id":"wmat532a"}
+{"time":"2025-03-24T17:22:25.476432009+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-24T17:22:25.48034639+07:00","level":"INFO","msg":"Stopped system monitor"}

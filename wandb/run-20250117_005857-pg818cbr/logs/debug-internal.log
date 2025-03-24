@@ -1,0 +1,19 @@
+{"time":"2025-01-17T00:58:57.645269046+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-17T00:58:57.645286736+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250117_005857-pg818cbr/logs/debug-core.log"}
+{"time":"2025-01-17T00:58:57.769371932+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-17T00:58:57.783273779+07:00","level":"INFO","msg":"created new stream","id":"pg818cbr"}
+{"time":"2025-01-17T00:58:57.78333469+07:00","level":"INFO","msg":"stream: started","id":"pg818cbr"}
+{"time":"2025-01-17T00:58:57.783383671+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T00:58:57.783369611+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T00:58:57.783406742+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T00:58:58.24695655+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-17T00:58:58.247735777+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-17T01:00:58.28776264+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-17T01:00:58.295047407+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-17T01:01:02.077095253+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-17T01:01:03.291146685+07:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2025-01-17T01:01:03.408558849+07:00","level":"INFO","msg":"stream: closing","id":"pg818cbr"}
+{"time":"2025-01-17T01:01:03.408583619+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T01:01:03.40861549+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T01:01:03.408613+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"pg818cbr"}}
+{"time":"2025-01-17T01:01:03.408738062+07:00","level":"INFO","msg":"stream: closed","id":"pg818cbr"}

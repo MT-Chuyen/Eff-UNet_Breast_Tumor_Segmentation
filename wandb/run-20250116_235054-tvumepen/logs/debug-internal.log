@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:50:54.608525774+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:50:54.608545235+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_235054-tvumepen/logs/debug-core.log"}
+{"time":"2025-01-16T23:50:54.657617211+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:50:54.667883749+07:00","level":"INFO","msg":"created new stream","id":"tvumepen"}
+{"time":"2025-01-16T23:50:54.667924709+07:00","level":"INFO","msg":"stream: started","id":"tvumepen"}
+{"time":"2025-01-16T23:50:54.66794655+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:54.66795563+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:54.66796642+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:55.123813379+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:50:55.124676795+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:50:57.84799152+07:00","level":"INFO","msg":"stream: closing","id":"tvumepen"}
+{"time":"2025-01-16T23:50:57.84802182+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:50:57.860642991+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:50:59.382662709+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:50:59.721311345+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:59.721349486+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:59.721428747+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"tvumepen"}}
+{"time":"2025-01-16T23:50:59.721437827+07:00","level":"INFO","msg":"stream: closed","id":"tvumepen"}

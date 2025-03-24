@@ -1,0 +1,91 @@
+Training Samples: 202
+Testing Samples: 50
+252
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:06<00:00,  3.88it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.43it/s]
+Epoch: 1 - TrainLoss: 0.568395258142398 - ValidLoss: 0.49015383635248455
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.57it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.82it/s]
+Epoch: 2 - TrainLoss: 0.4085334631112906 - ValidLoss: 0.355402478149959
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.67it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00,  7.06it/s]
+Epoch: 3 - TrainLoss: 0.34895851749640244 - ValidLoss: 0.3293209373950958
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.38it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.95it/s]
+Epoch: 4 - TrainLoss: 0.3051312015606807 - ValidLoss: 0.26337056500571115
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:06<00:00,  4.20it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.71it/s]
+Epoch: 5 - TrainLoss: 0.2681166117007916 - ValidLoss: 0.263445041009358
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.81it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.52it/s]
+Epoch: 6 - TrainLoss: 0.23628879281190726 - ValidLoss: 0.2131131078515734
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.82it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.97it/s]
+Epoch: 7 - TrainLoss: 0.21142966242936942 - ValidLoss: 0.22578840383461543
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.78it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.76it/s]
+Epoch: 8 - TrainLoss: 0.18632426800636145 - ValidLoss: 0.344298392534256
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.88it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.98it/s]
+Epoch: 9 - TrainLoss: 0.16652598232030869 - ValidLoss: 0.2283589882510049
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.86it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.83it/s]
+Epoch: 10 - TrainLoss: 0.1476393066919767 - ValidLoss: 0.28783823549747467
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.76it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.39it/s]
+Epoch: 11 - TrainLoss: 0.12865932199817437 - ValidLoss: 0.2569538652896881
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.65it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.78it/s]
+Epoch: 12 - TrainLoss: 0.11645974734654793 - ValidLoss: 0.2447585846696581
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26/26 [00:05<00:00,  4.71it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.56it/s]
+Epoch: 13 - TrainLoss: 0.10655270344935931 - ValidLoss: 0.18699161069733755
+ 58%|██████████████████████████████████████████████████████████████████████████▍                                                      | 15/26 [00:03<00:02,  4.66it/s]
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 65, in trainer
+    for train_img, train_mask in tqdm(train_dl):
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 37, in __getitem__
+    img = img.convert('RGB') if img.mode == 'RGBA' else img
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/Image.py", line 995, in convert
+    self.load()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/ImageFile.py", line 293, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 65, in trainer
+    for train_img, train_mask in tqdm(train_dl):
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/get_ds.py", line 37, in __getitem__
+    img = img.convert('RGB') if img.mode == 'RGBA' else img
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/Image.py", line 995, in convert
+    self.load()
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/PIL/ImageFile.py", line 293, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt

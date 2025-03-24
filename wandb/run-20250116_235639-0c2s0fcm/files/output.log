@@ -1,0 +1,31 @@
+Training Samples: 202
+Testing Samples: 50
+252
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 52, in trainer
+    model = get_method(args).to(device)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 114, in get_method
+    return UNetEfficientNetB3(n_classes=1)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 50, in __init__
+    self.encoder.features[9], # Output size: 7, Channels: 320
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 143, in __getitem__
+    return self._get_item_by_idx(self._modules.values(), idx)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 134, in _get_item_by_idx
+    raise IndexError(f"index {idx} is out of range")
+IndexError: index 9 is out of range
+Traceback (most recent call last):
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/main.py", line 9, in <module>
+    trainer(args)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/trainer.py", line 52, in trainer
+    model = get_method(args).to(device)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 114, in get_method
+    return UNetEfficientNetB3(n_classes=1)
+  File "/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/model.py", line 50, in __init__
+    self.encoder.features[9], # Output size: 7, Channels: 320
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 143, in __getitem__
+    return self._get_item_by_idx(self._modules.values(), idx)
+  File "/media/mountHDD2/chuyenmt/.env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 134, in _get_item_by_idx
+    raise IndexError(f"index {idx} is out of range")
+IndexError: index 9 is out of range

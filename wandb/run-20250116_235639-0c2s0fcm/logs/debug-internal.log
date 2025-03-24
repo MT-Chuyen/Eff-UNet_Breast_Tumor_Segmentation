@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:56:39.024548983+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:56:39.024568234+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_235639-0c2s0fcm/logs/debug-core.log"}
+{"time":"2025-01-16T23:56:39.13187679+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:56:39.142014588+07:00","level":"INFO","msg":"created new stream","id":"0c2s0fcm"}
+{"time":"2025-01-16T23:56:39.142051948+07:00","level":"INFO","msg":"stream: started","id":"0c2s0fcm"}
+{"time":"2025-01-16T23:56:39.142067598+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:39.142091599+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:39.14215142+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:39.537839729+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:56:39.53909846+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:56:40.489709911+07:00","level":"INFO","msg":"stream: closing","id":"0c2s0fcm"}
+{"time":"2025-01-16T23:56:40.489753292+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:56:40.499598345+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:56:42.004196329+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:56:42.336664438+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:42.336731989+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:42.33679978+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"0c2s0fcm"}}
+{"time":"2025-01-16T23:56:42.33681099+07:00","level":"INFO","msg":"stream: closed","id":"0c2s0fcm"}

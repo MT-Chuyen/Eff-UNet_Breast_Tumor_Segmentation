@@ -1,0 +1,18 @@
+{"time":"2025-01-16T23:39:01.180059007+07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-01-16T23:39:01.180075837+07:00","level":"INFO","msg":"created symlink","path":"/media/mountHDD2/chuyenmt/BrEaST/Eff-UNet_Breast_Tumor_Segmentation/wandb/run-20250116_233901-yg94jn4o/logs/debug-core.log"}
+{"time":"2025-01-16T23:39:01.337215094+07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-01-16T23:39:01.350476471+07:00","level":"INFO","msg":"created new stream","id":"yg94jn4o"}
+{"time":"2025-01-16T23:39:01.350517412+07:00","level":"INFO","msg":"stream: started","id":"yg94jn4o"}
+{"time":"2025-01-16T23:39:01.350556932+07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:01.350584302+07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:01.350659994+07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:01.798162686+07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-16T23:39:01.799749938+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-16T23:39:02.126761041+07:00","level":"INFO","msg":"stream: closing","id":"yg94jn4o"}
+{"time":"2025-01-16T23:39:02.126811792+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-16T23:39:02.134454079+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-16T23:39:04.224279918+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-16T23:39:04.604994878+07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:04.605032018+07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:04.605027578+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yg94jn4o"}}
+{"time":"2025-01-16T23:39:04.60513162+07:00","level":"INFO","msg":"stream: closed","id":"yg94jn4o"}

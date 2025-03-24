@@ -1,2 +1,2 @@
-python3 main.py --model_name eub7
-python3 main.py --model_name eub7without2
+python3 main.py --model eub3 --ds breast_albumentation
+ 
